@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+     <link rel="stylesheet" href="./style.css">
+     <title>Sriram Krishnan - Resume</title>
+</head>
+
+<body>
+    <div id="page-wrap">
+        <div id="contact-info" class="vcard">
+            <h1 class="fn">Sriram Krishnan</h1>
+            <p>
+                <a class="email" href="mailto:sriramkrishnan1729@gmail.com">Email</a> | 
+                <a class="email" href="https://www.linkedin.com/in/sriramk1729/" target="_blank">LinkedIn</a> | 
+                <a class="email" href="https://github.com/sriramk42" target="_blank">Github</a>
+            </p>
+        </div>
+        
+        <div class="clear"></div>
+        
+        <dl>
+            <dd class="clear"></dd>
+            
+            <dt class="projects">Projects</dt>
+            <dd>
+                <h2>AWS Wordpress Web App - Single Server to Elastic Evolution</h2>
+                <p>Evolved the architecture of a single server web app into a scalable and reliant app by splitting the DB into RDS, the WP filesystem into EFS and using ASG and ALB</p>
+            </dd>
+
+            <dd>
+              <h2>Web Identity Federation with Serverless application:</h2>
+              <p>Implemented a serverless application with S3 for front-end app hosting, Google API Project as an ID provider, and Cognito and IAM Roles to swap token for AWS credentials</p>
+          </dd>
+
+          <dd>
+            <h2>CodePipeline</h2>
+            <p>Implemented a full code pipeline using CodeCommit, CodeBuild, CodePipeline and ECS</p>
+          </dd>
+
+          <dd>
+            <h2>This Website</h2>
+            <p>HTML, CSS hosted on S3. DynamoDB, Lambda, and API Gateway for visitor counter. Congratulations, you are visitor number <span id="visitor-count"></span></p>
+          </dd>
+            
+            <dd class="clear"></dd>
+            
+            <dt>Skills</dt>
+            <dd>
+                <h2>Programming Languages and Frameworks</h2>
+                <p>Python, Ruby, Rails, JavaScript, React, NodeJS</p>
+                
+                <h2>Devops and Cloud</h2>
+                <p>AWS, Docker, Kubernetes, Ansible, Jenkins, Linux, SQL</p>
+            </dd>
+
+            <dd class="clear"></dd>
+            
+            <dt>Certifications</dt>
+            <dd>
+                <h2>AWS Certified Solutions Architect - Associate</h2>    
+                <h2>AWS Developer Associate</h2>
+            </dd>
+            
+            <dd class="clear"></dd>
+            
+            <dt>Experience</dt>
+            <dd>
+                <h2>Saturday Kids<span>Entrepreneur in Residence - Tokyo - Nov 2021 - Jul 2022</span></h2>
+                
+                <h2>Rakuten <span>DevOps Engineer - Tokyo - Jul 2021 - Oct 2021</span></h2>
+
+                <h2>MetricFire <span>Lead Engineer - Tokyo - Apr 2020 - Jul 2021</span></h2>
+
+                <h2>Optimyst Learning Resources <span>Founder - Mumbai - Sep 2015 - Mar 2019</span></h2>
+            </dd>
+            
+            <dd class="clear"></dd>
+            
+            <dt>Hobbies</dt>
+            <dd>Quizzing and Trivia</dd>
+            <dd>Watching Football and Formula1</dd>
+            
+            <dd class="clear"></dd>
+        </dl>    
+    </div>
+    <script>
+      // url = "https://unv526lw24.execute-api.us-east-1.amazonaws.com/Beta"
+      url = "https://21ho9cmxzl.execute-api.us-east-1.amazonaws.com/Prod/count/"
+      const response = fetch(url)
+                        .then(res => res.json())
+                        .then(res => document.getElementById('visitor-count').innerText = res)
+    </script>
+</body>
+
+</html>
